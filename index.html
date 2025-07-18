@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HideAway Bookstore Chatbot</title>
+    <link rel="icon" href="image (4).png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Website Content -->
+    <header class="header">
+        <div class="container">
+            <h1>
+                <img src="image (4).jpg" alt="HideAway Logo" class="logo">
+                Hideaway
+            </h1>
+            <nav>
+                <a href="#books">Books</a>
+                <a href="#book-clubs">Book Clubs</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="hero">
+                <h2>Welcome to Hideaway</h2>
+                <p>Your Next Great Read is Just a Click Away</p>
+                <button class="cta-button">Browse Books</button>
+            </section>
+
+            <section class="featured-books">
+                <h3>Featured Books</h3>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <img src="https://via.placeholder.com/200x300/4A90E2/FFFFFF?text=Book+1" alt="Featured Book 1">
+                        <h4>The Great Adventure</h4>
+                        <p class="author">by John Smith</p>
+                        <p class="price">$19.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://via.placeholder.com/200x300/E94B3C/FFFFFF?text=Book+2" alt="Featured Book 2">
+                        <h4>Mystery in the Dark</h4>
+                        <p class="author">by Jane Doe</p>
+                        <p class="price">$24.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="book-card">
+                        <img src="https://via.placeholder.com/200x300/50C878/FFFFFF?text=Book+3" alt="Featured Book 3">
+                        <h4>Science Fiction Tales</h4>
+                        <p class="author">by Alex Johnson</p>
+                        <p class="price">$22.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="book-carousel-section">
+                <h3>📱 Trending Books</h3>
+                <p class="section-description">Swipe through our hottest picks - just like your favorite videos!</p>
+                
+                <div class="carousel-container">
+                    <div class="carousel-wrapper" id="book-carousel">
+                        <div class="carousel-item active" data-book-id="1">
+                            <div class="book-showcase">
+                                <div class="book-image">
+                                    <img src="https://via.placeholder.com/300x450/4A90E2/FFFFFF?text=Adventure" alt="The Great Adventure">
+                                    <div class="book-overlay">
+                                        <div class="book-actions">
+                                            <button class="action-btn like-btn">
+                                                <i class="fas fa-heart"></i>
+                                                <span>1.2K</span>
+                                            </button>
+                                            <button class="action-btn share-btn">
+                                                <i class="fas fa-share"></i>
+                                                <span>Share</span>
+                                            </button>
+                                            <button class="action-btn cart-btn">
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <span>Add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book-info">
+                                    <h4>The Great Adventure</h4>
+                                    <p class="author">by John Smith</p>
+                                    <p class="price">$19.99</p>
+                                    <p class="description">An epic tale of courage and discovery in uncharted lands. Perfect for adventure lovers!</p>
+                                    <div class="book-tags">
+                                        <span class="tag">Adventure</span>
+                                        <span class="tag">Bestseller</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" data-book-id="2">
+                            <div class="book-showcase">
+                                <div class="book-image">
+                                    <img src="https://via.placeholder.com/300x450/E94B3C/FFFFFF?text=Mystery" alt="Mystery in the Dark">
+                                    <div class="book-overlay">
+                                        <div class="book-actions">
+                                            <button class="action-btn like-btn">
+                                                <i class="fas fa-heart"></i>
+                                                <span>2.1K</span>
+                                            </button>
+                                            <button class="action-btn share-btn">
+                                                <i class="fas fa-share"></i>
+                                                <span>Share</span>
+                                            </button>
+                                            <button class="action-btn cart-btn">
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <span>Add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book-info">
+                                    <h4>Mystery in the Dark</h4>
+                                    <p class="author">by Jane Doe</p>
+                                    <p class="price">$24.99</p>
+                                    <p class="description">A gripping mystery that will keep you guessing until the very end. Join our Mystery Club!</p>
+                                    <div class="book-tags">
+                                        <span class="tag">Mystery</span>
+                                        <span class="tag">Club Pick</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" data-book-id="3">
+                            <div class="book-showcase">
+                                <div class="book-image">
+                                    <img src="https://via.placeholder.com/300x450/50C878/FFFFFF?text=Sci-Fi" alt="Science Fiction Tales">
+                                    <div class="book-overlay">
+                                        <div class="book-actions">
+                                            <button class="action-btn like-btn">
+                                                <i class="fas fa-heart"></i>
+                                                <span>892</span>
+                                            </button>
+                                            <button class="action-btn share-btn">
+                                                <i class="fas fa-share"></i>
+                                                <span>Share</span>
+                                            </button>
+                                            <button class="action-btn cart-btn">
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <span>Add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book-info">
+                                    <h4>Science Fiction Tales</h4>
+                                    <p class="author">by Alex Johnson</p>
+                                    <p class="price">$22.99</p>
+                                    <p class="description">Mind-bending stories from the future and beyond. Explore new worlds and possibilities!</p>
+                                    <div class="book-tags">
+                                        <span class="tag">Sci-Fi</span>
+                                        <span class="tag">New Release</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" data-book-id="4">
+                            <div class="book-showcase">
+                                <div class="book-image">
+                                    <img src="https://via.placeholder.com/300x450/FF6B9D/FFFFFF?text=Romance" alt="Romance Under Stars">
+                                    <div class="book-overlay">
+                                        <div class="book-actions">
+                                            <button class="action-btn like-btn">
+                                                <i class="fas fa-heart"></i>
+                                                <span>3.4K</span>
+                                            </button>
+                                            <button class="action-btn share-btn">
+                                                <i class="fas fa-share"></i>
+                                                <span>Share</span>
+                                            </button>
+                                            <button class="action-btn cart-btn">
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <span>Add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book-info">
+                                    <h4>Romance Under Stars</h4>
+                                    <p class="author">by Emily Brown</p>
+                                    <p class="price">$18.99</p>
+                                    <p class="description">A heartwarming love story that transcends time. Perfect for romance book club members!</p>
+                                    <div class="book-tags">
+                                        <span class="tag">Romance</span>
+                                        <span class="tag">Trending</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" data-book-id="5">
+                            <div class="book-showcase">
+                                <div class="book-image">
+                                    <img src="https://via.placeholder.com/300x450/9B59B6/FFFFFF?text=Biography" alt="Becoming">
+                                    <div class="book-overlay">
+                                        <div class="book-actions">
+                                            <button class="action-btn like-btn">
+                                                <i class="fas fa-heart"></i>
+                                                <span>1.8K</span>
+                                            </button>
+                                            <button class="action-btn share-btn">
+                                                <i class="fas fa-share"></i>
+                                                <span>Share</span>
+                                            </button>
+                                            <button class="action-btn cart-btn">
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <span>Add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book-info">
+                                    <h4>Becoming</h4>
+                                    <p class="author">by Michelle Obama</p>
+                                    <p class="price">$24.99</p>
+                                    <p class="description">The deeply personal memoir from the former First Lady. Inspiring and transformative!</p>
+                                    <div class="book-tags">
+                                        <span class="tag">Biography</span>
+                                        <span class="tag">Inspiring</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-navigation">
+                        <button class="nav-btn prev-btn" id="prev-btn">
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                        <div class="carousel-indicators">
+                            <span class="indicator active"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                        </div>
+                        <button class="nav-btn next-btn" id="next-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="book-clubs" id="book-clubs">
+                <h3>📚 HideAway Reading Clubs</h3>
+                <p class="section-description">Join our vibrant community of readers! Discuss books, share insights, and discover new favorites together.</p>
+                
+                <div class="clubs-grid">
+                    <div class="club-card active">
+                        <div class="club-header">
+                            <div class="club-icon">🔍</div>
+                            <div class="club-info">
+                                <h4>Mystery Readers Circle</h4>
+                                <span class="member-count">247 members</span>
+                            </div>
+                            <span class="club-status active">Active</span>
+                        </div>
+                        <div class="current-book">
+                            <strong>Currently Reading:</strong> "Mystery in the Dark" by Jane Doe
+                        </div>
+                        <div class="club-description">
+                            Dive deep into mysteries, thrillers, and crime novels. Weekly discussions every Tuesday.
+                        </div>
+                        <div class="club-stats">
+                            <span><i class="fas fa-calendar"></i> Next meeting: Jan 23</span>
+                            <span><i class="fas fa-comments"></i> 45 discussions</span>
+                        </div>
+                        <button class="join-club-btn" data-club="mystery">Join Club</button>
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-header">
+                            <div class="club-icon">🚀</div>
+                            <div class="club-info">
+                                <h4>Sci-Fi Explorers</h4>
+                                <span class="member-count">189 members</span>
+                            </div>
+                            <span class="club-status">Active</span>
+                        </div>
+                        <div class="current-book">
+                            <strong>Currently Reading:</strong> "Science Fiction Tales" by Alex Johnson
+                        </div>
+                        <div class="club-description">
+                            Explore the future, space, and technology through the best sci-fi literature.
+                        </div>
+                        <div class="club-stats">
+                            <span><i class="fas fa-calendar"></i> Next meeting: Jan 25</span>
+                            <span><i class="fas fa-comments"></i> 38 discussions</span>
+                        </div>
+                        <button class="join-club-btn" data-club="scifi">Join Club</button>
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-header">
+                            <div class="club-icon">❤️</div>
+                            <div class="club-info">
+                                <h4>Romance Book Club</h4>
+                                <span class="member-count">312 members</span>
+                            </div>
+                            <span class="club-status">Active</span>
+                        </div>
+                        <div class="current-book">
+                            <strong>Currently Reading:</strong> "Romance Under Stars" by Emily Brown
+                        </div>
+                        <div class="club-description">
+                            Share the love for romantic stories, from contemporary to historical romance.
+                        </div>
+                        <div class="club-stats">
+                            <span><i class="fas fa-calendar"></i> Next meeting: Jan 24</span>
+                            <span><i class="fas fa-comments"></i> 52 discussions</span>
+                        </div>
+                        <button class="join-club-btn" data-club="romance">Join Club</button>
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-header">
+                            <div class="club-icon">📖</div>
+                            <div class="club-info">
+                                <h4>Biography Enthusiasts</h4>
+                                <span class="member-count">156 members</span>
+                            </div>
+                            <span class="club-status">Active</span>
+                        </div>
+                        <div class="current-book">
+                            <strong>Currently Reading:</strong> "Becoming" by Michelle Obama
+                        </div>
+                        <div class="club-description">
+                            Discover inspiring life stories and learn from remarkable individuals.
+                        </div>
+                        <div class="club-stats">
+                            <span><i class="fas fa-calendar"></i> Next meeting: Jan 26</span>
+                            <span><i class="fas fa-comments"></i> 29 discussions</span>
+                        </div>
+                        <button class="join-club-btn" data-club="biography">Join Club</button>
+                    </div>
+                </div>
+
+                <div class="club-benefits">
+                    <h4>📌 Club Member Benefits</h4>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <i class="fas fa-percent"></i>
+                            <span>10% discount on club books</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Priority access to author events</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-gift"></i>
+                            <span>Monthly book surprises</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-users"></i>
+                            <span>Connect with fellow readers</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-users"></i>
+                            <span>Read with friends</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <div class="chatbot-toggle" id="chatbot-toggle">
+            <i class="fas fa-comment"></i>
+            <span class="notification-dot" id="notification-dot"></span>
+        </div>
+        
+        <div class="chatbot-container" id="chatbot-container">
+            <div class="chatbot-header">
+                <div class="bot-info">
+                    <div class="bot-avatar">
+                        <img src="image (4).png" alt="HideAway Logo" class="bot-logo">
+                    </div>
+                    <div class="bot-details">
+                        <h4>BookBot</h4>
+                        <span class="status">Online</span>
+                    </div>
+                </div>
+                <button class="minimize-btn" id="minimize-btn">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hello! 👋 Welcome to HideAway! I'm BookBot, your personal book assistant.</p>
+                        <p>I can help you with:</p>
+                        <ul>
+                            <li>📚 Finding books by genre, author, or title</li>
+                            <li>🔍 Getting book recommendations</li>
+                            <li>� Joining our book clubs and reading communities</li>
+                            <li>�📦 Tracking your orders</li>
+                            <li>❓ Answering questions about our store</li>
+                        </ul>
+                        <p>How can I assist you today?</p>
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+            
+            <div class="quick-actions">
+                <button class="quick-action-btn" data-action="recommend">📚 Get Recommendations</button>
+                <button class="quick-action-btn" data-action="search">🔍 Search Books</button>
+                <button class="quick-action-btn" data-action="clubs">👥 Book Clubs</button>
+                <button class="quick-action-btn" data-action="track">📦 Track Order</button>
+                <button class="quick-action-btn" data-action="help">❓ Help</button>
+            </div>
+            
+            <div class="chatbot-input">
+                <div class="input-container">
+                    <input type="text" id="message-input" placeholder="Type your message here..." autocomplete="off">
+                    <button class="send-btn" id="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
